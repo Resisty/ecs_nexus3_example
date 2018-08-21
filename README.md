@@ -17,10 +17,16 @@ configuration files present. I will try to enumerate them here.
     * Work with your registrar to set these up first and expose the zone as a
       variable (see `ecs_nexus` module in `main.tf`)
 * Docker image builder/pusher plugin
-    *  To use this plugin, you'll have to build it w/: ``` $ go build
-       github.com/zongoose/terraform-provider-docker-image ``` then add the
-       following to your ~/.terraformrc file: ``` providers { dockerimage =
-       "/path/to/terraform-provider-docker-image" } ```
+    *  To use this plugin, you'll have to build it w/:
+       ```
+       $ go build github.com/zongoose/terraform-provider-docker-image
+       ```
+       then add the following to your `~/.terraformrc` file:
+       ```
+       providers {
+         dockerimage = "/path/to/terraform-provider-docker-image"
+       }
+       ```
 * KMS keys
     * In my case these are pre-provisioned and referenced as variables in the
       module for decrypting sensitive values such as the license contents.
