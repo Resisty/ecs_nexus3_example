@@ -1,0 +1,5 @@
+,
+          {
+            "containerPort": ${portnum},
+            "hostPort": ${portnum}
+          }
